@@ -1,0 +1,243 @@
+/* @media screen and (min-width: 1400px){
+  .brd{display: none;}
+} */
+@media screen and (max-width: 1400px) {
+  .brd {
+    display: none;
+  }
+}
+
+section.contact {
+  position: absolute;
+  height: auto !important;
+  z-index: 1;
+}
+
+section.contact .inner {
+  /* min-height: 100vh; */
+}
+
+section.contact .inner .contact-area {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0 30px 0;
+}
+
+section.contact .inner .contact-area h2.title {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  section.contact .inner .contact-area h2.title {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.contact .inner .contact-area h2.title {
+    font-size: 11vw;
+    text-align: center;
+  }
+}
+
+section.contact .inner .contact-area p.desc {
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  section.contact .inner .contact-area p.desc {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.contact .inner .contact-area p.desc {
+    font-size: 4vw;
+    text-align: center;
+  }
+}
+
+section.contact .inner .contact-area .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 70px;
+}
+
+section.contact .inner .contact-area .contents .ref-area {
+  width: 50%;
+}
+
+section.contact .inner .contact-area .contents .ref-area .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  text-align: center;
+}
+
+section.contact .inner .contact-area .contents .ref-area .info ul li i {
+  width: 20%;
+  color: #fff;
+  font-size: 30px;
+}
+
+section.contact .inner .contact-area .contents .ref-area .info ul li span, section.contact .inner .contact-area .contents .ref-area .info ul li a {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}
+
+section.contact .inner .contact-area .contents .ref-area .info ul li a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section.contact .inner .contact-area .contents .ref-area .info ul li a:hover {
+  color: #ebcdbf;
+}
+
+section.contact .inner .contact-area .contents .ref-area .info ul li:nth-child(2) span {
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 1000px) {
+  section.contact .inner .contact-area .contents .ref-area .info ul li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.contact .inner .contact-area .contents .ref-area .info ul li span, section.contact .inner .contact-area .contents .ref-area .info ul li a {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.contact .inner .contact-area .contents .ref-area .info ul li {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.contact .inner .contact-area .contents .ref-area .info ul li span, section.contact .inner .contact-area .contents .ref-area .info ul li a {
+    /* width: 70%; */
+  }
+}
+
+section.contact .inner .contact-area .contents .emailForm-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  border: 1px solid #a5a5a5;
+  border-radius: 20px;
+}
+
+section.contact .inner .contact-area .contents .emailForm-area form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  padding: 40px 45px;
+  border-radius: 15px;
+}
+
+section.contact .inner .contact-area .contents .emailForm-area form .form-element {
+  border-bottom: 1px solid #a5a5a5;
+}
+
+section.contact .inner .contact-area .contents .emailForm-area form .form-element.email-area {
+  margin: 15px 0;
+}
+
+section.contact .inner .contact-area .contents .emailForm-area form .form-element input, section.contact .inner .contact-area .contents .emailForm-area form .form-element textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 1.2em;
+  height: 1.2;
+  letter-spacing: 2px;
+}
+
+section.contact .inner .contact-area .contents .emailForm-area form button {
+  width: 120px;
+  margin: 20px auto 0;
+  padding: 10px;
+  color: #252422;
+  border-radius: 10px;
+  background: #eee;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section.contact .inner .contact-area .contents .emailForm-area form button:hover {
+  background: #ebcdbf;
+}
+
+@media screen and (min-width: 1000px) {
+  section.contact .inner .contact-area .contents .ref-area {
+    width: 50%;
+  }
+  section.contact .inner .contact-area .contents .emailForm-area {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.contact .inner .contact-area .contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.contact .inner .contact-area .contents .ref-area {
+    width: 60%;
+    margin: 0 auto;
+  }
+  section.contact .inner .contact-area .contents .emailForm-area {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

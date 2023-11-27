@@ -1,0 +1,127 @@
+$color1:#da4236;
+$color2: #ebcdbf;
+$color3: #252422;
+
+@mixin en{
+  font-family: 'Playfair Display', serif;
+}
+@mixin en1{
+  font-family: 'Raleway', sans-serif;
+}
+@mixin en3{
+  font-family: 'Baskervville', serif;
+}
+@mixin en4{
+  font-family: 'Dosis', sans-serif;
+}
+@mixin en5{
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin center($w,$mw){
+  width:$w;
+  max-width:$mw;
+  margin: 0 auto;
+}
+@mixin btn($v,$h,$bg,$borderColor,$color,$hoverbg,$hoverBorderColor,$hovercolor){
+  display: inline-block;
+  padding: $v $h;
+  background:$bg;
+  border:1px solid $borderColor;
+  color:$color;
+  &:hover{
+    background: $hoverbg;
+    border:1px solid $hoverBorderColor;
+    color:$hovercolor;
+  }
+}
+@mixin iconfont($pos,$code){
+  &::#{$pos}{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content:$code;
+  }
+}
+@mixin posabslt($left,$top,$tl,$tr){
+  position: absolute;
+  left:$left;
+  top:$top;
+  transform: translate($tl,$tr);
+}
+@mixin posabsrt($right,$top,$tl,$tr){
+  position: absolute;
+  right:$right;
+  top:$top;
+  transform: translate($tl,$tr);
+}
+@mixin posabsrb($right,$bottom,$tl,$tr){
+  position: absolute;
+  right:$right;
+  bottom:$bottom;
+  transform: translate($tl,$tr);
+}
+@mixin posabslb($left,$bottom,$tl,$tr){
+  position: absolute;
+  left:$left;
+  bottom:$bottom;
+  transform: translate($tl,$tr);
+}
+@mixin bgpos($fill,$h,$v){
+  background: {
+    size:$fill;
+    position:$h $v;
+    repeat:no-repeat;
+  }
+}
+@mixin clearfix{
+  &::after{
+    content:"";
+    clear: both;
+    display: block;
+  }
+}
+@mixin pdv($lgpd,$smpd){
+  @media screen and (min-width:1000px){
+    padding: $lgpd 0;
+  }
+  @media screen and (max-width:1000px){
+    padding: $smpd 0;
+  }
+}
+@mixin circle($size){
+  width:$size;
+  height:$size;
+  border-radius:$size;
+  line-height:$size;
+  text-align: center;
+}
+@mixin bar($pos,$w,$h,$m,$m2,$bg){
+  &::#{$pos}{
+    content:"";
+    display: block;
+    width:$w;
+    height:$h;
+    margin:$m $m2;
+    background:$bg;
+  }
+}
+@mixin fontsize($w,$size1,$size2){
+  @media screen and (min-width:$w){
+    font-size:$size1;
+  }
+  @media screen and (max-width:$w){
+    font-size:$size2;
+  }
+}
+
+/* @media screen and (min-width: 1400px){
+  .brd{display: none;}
+} */
+@media screen and (max-width: 1400px){
+  .brd{display: none}
+}
