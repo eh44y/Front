@@ -1,0 +1,268 @@
+<?php include "sub_header.html" ?>
+  <h2>kitchen room</h2>
+<script>
+
+  $(function(){
+      $(".kitchenroom li:eq(1)").addClass("mtop")
+      item = "li"
+  
+      $(window).resize(function(){
+        var $container = $('section.kitchenroom ul');
+        $container.isotope({
+          filter: item,
+          animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+          }
+        });
+      })//resize
+    })//ready
+  
+  $(window).load(function(){
+    //컨테이너 설정
+    
+    var $container = $('section.kitchenroom ul');
+    $container.isotope({
+      filter: item,
+      animationOptions: {
+        duration: 750,
+        easing: 'linear',
+        queue: false
+      }
+    });
+  
+      
+  //이벤트 설정
+  $('.btn_container div button').click(function(){
+    btnN  = $(this).attr("data-n")
+    $(".btn_container div button").removeClass("active")
+    $(this).addClass("active")
+    
+    item = $(this).attr("data-cate");
+    $(".kitchenroom li").removeClass("mtop")
+    $(".kitchenroom "+item+":eq(1)").addClass("mtop")
+
+    $container.isotope({
+      filter: item,
+      animationOptions: {
+        duration: 750,
+        easing: 'linear',
+        queue: false
+      }
+    });
+  })//click
+
+  /* $(".btn_cate_sm button").click(function(){
+    n = $(this).attr("data-n")
+
+    $(this).siblings("button").stop().slideUp()
+    $(this).siblings("button.aa").stop().slideDown()
+    
+    if(n == 10){
+      $(".btn_cate button").stop().slideDown()
+    }
+  }) *///click
+  
+  $(".btn_cate_sm .aa").click(function(){
+      $(this).siblings("div").stop().slideToggle()
+    })//click
+  $(".btn_cate_sm div button").click(function(){
+    n = $(this).attr("data-n")
+    if(n == 1 || n == 2 || n == 3){
+      $(this).parent("div").stop().slideUp()
+    }
+  })//click
+
+  $("section.kitchenroom ul li a").attr("href","buy-page.html")
+
+})//load
+
+</script>
+
+  <section class="kitchenroom">
+
+    <div class="btn_container btn_cate btn_cate_lg">
+      <div>
+        <button class="catebtn1 active" data-n="1" data-cate="li">All</button>
+        <button class="catebtn2" data-n="2" data-cate=".Kdresser">Dresser</button>
+        <button class="catebtn3" data-n="3" data-cate=".Ktable">Table</button>
+      </div>
+    </div>
+    <div class="btn_container btn_cate btn_cate_sm">
+      <button class="aa" data-n="10">Category</button>
+      <div>
+        <button class="catebtn1 active" data-n="1" data-cate="li">All</button>
+        <button class="catebtn2" data-n="2" data-cate=".Kdresser">Dresser</button>
+        <button class="catebtn3" data-n="3" data-cate=".Ktable">Table</button>
+      </div>
+    </div>
+
+    <ul>
+      <!-- dresser -->
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser1.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Anes Metal Sideboard Closet B Type</h3>
+          <p class="price">KRW 480,000</p>
+          <p class="sale">KRW 336,000</p>
+        </div>
+      </li>
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser2.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Anes Metal Sideboard Closet A Type</h3>
+          <p class="price">KRW 430,000</p>
+          <p class="sale">KRW 396,000</p>
+        </div>
+      </li>
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser3.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Luis Ktichen Closet</h3>
+          <p class="price">KRW 370,000</p>
+          <p class="sale">KRW 320,000</p>
+        </div>
+      </li>
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser4.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Rhapsody Kitchen Closet</h3>
+          <p class="price">KRW 220,000</p>
+          <p class="sale">KRW 175,000</p>
+        </div>
+      </li>
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser5.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Luis Folding Table Range</h3>
+          <p class="price">KRW 170,000</p>
+          <p class="sale">KRW 143,000</p>
+        </div>
+      </li>
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser6.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">RZ9470 Theia Kitchen Closet</h3>
+          <p class="price">KRW 79,000</p>
+          <p class="sale">KRW 53,000</p>
+        </div>
+      </li>
+      <li class="Kdresser">
+        <a href="#">
+          <img src="img/YSJ/kitchenKdresser/Kdresser7.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">BZ Lilac Kitchen Closet</h3>
+          <p class="price">KRW 270,000</p>
+          <p class="sale">KRW 240,000</p>
+        </div>
+      </li>
+      <!-- dressser end -->
+
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable1.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Brocciu A Four-Six person Marble Table</h3>
+          <p class="price">KRW 470,000</p>
+          <p class="sale">KRW 312,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable2.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Raum  Angel White Table</h3>
+          <p class="price">KRW 448,000</p>
+          <p class="sale">KRW 375,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable3.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Crystal-Coated Natural Marble Table</h3>
+          <p class="price">KRW 589,000</p>
+          <p class="sale">KRW 413,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable4.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">J&#183;SOO Wooden Table</h3>
+          <p class="price">KRW 610,000</p>
+          <p class="sale">KRW 327,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable5.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Cielo A Four-Six person Marble Table</h3>
+          <p class="price">KRW 946,000</p>
+          <p class="sale">KRW 622,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable6.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Mary Homica Square Table</h3>
+          <p class="price">KRW 180,000</p>
+          <p class="sale">KRW 132,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable7.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Freemade Bench Chair Set</h3>
+          <p class="price">KRW 149,000</p>
+          <p class="sale">KRW 63,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable8.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Torini Table Bench Chair Set</h3>
+          <p class="price">KRW 158,000</p>
+          <p class="sale">KRW 121,000</p>
+        </div>
+      </li>
+      <li class="Ktable">
+        <a href="#">
+          <img src="img/YSJ/kitchenKtable/Ktable9.jpg" alt="">
+        </a>
+        <div class="textbox">
+          <h3 class="name">Jace Acacia Primaryis A Four person Table</h3>
+          <p class="price">KRW 162,000</p>
+          <p class="sale">KRW 134,000</p>
+        </div>
+      </li>
+      <!-- teble end -->
+    </ul>
+  </section>
+<?php include "sub_footer.html" ?>

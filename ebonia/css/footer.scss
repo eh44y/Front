@@ -1,0 +1,96 @@
+@import "styleguide";
+
+footer{
+  box-sizing: border-box;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  @media screen and (min-width:1000.1px){
+    @include center(1500px);
+    border-top: 1px solid #666;
+    padding: 25px;
+    .textwrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      >ul{
+        width: 45%;
+        >li{
+          margin-bottom: 20px;
+          >h3{
+            display: inline-block;
+            vertical-align: top;
+          }//footer>textbox>ul>li>h3
+          >ul{
+            display: inline-block;
+            margin-left: 23px;
+            >li{
+              margin-bottom: 9px;
+            }//footer>textwrap>ul>li>ul>li
+          }//footer>textwrap>ul>li>ul
+        }//footer>textwrap>ul>li
+      }//footer>textwrap>ul
+  
+      .textbox{
+        width: 50%;
+        >p{
+          text-align: right;
+          &:last-child{display: none;}
+          >a{
+            font-size: 2em;
+            &:first-child{
+              margin-right: 9px;
+            }
+          }//footer>textwrap>textbox>p>a
+          >i, a{
+            display: inline-block;
+            margin-bottom: 9px;
+          }//footer>textwrap>textbox>p>i
+        }//footer>textwrap>textbox>p
+      }//footer>textwrap>textbox
+    }//footer>textwrap
+
+  }//lg
+  @media screen and (max-width:1000px){
+    text-align: center;
+    padding: 40px;
+    background-color: $color5;
+    color: $tcolor4;
+    .textwrap{
+      >ul{
+        display: none;
+      }//textwrap>ul
+      .textbox{
+        >p{
+          &:last-child{
+            margin-top: 30px;
+            color: $tcolor3;
+          }
+          >a{
+            display: inline-block;
+            font-size: 1.5em;
+            margin: 0 9px;
+            margin-bottom: 25px;
+          }//textwrap>textbox>p>a
+          >i{
+            display: inline-block;
+            margin-bottom: 11px;
+            >span{
+              display: none;
+            }//textwrap>textbox>p>i>span
+          }//textwrap>textbox>p>i
+        }//textwrap>textbox>p
+      }//textwrap>textbox
+    }//textwrap
+  }//md
+}//footer
+
+
+
+/* 
+@media screen and (min-width:1000.1px){
+    
+  }//lg
+  @media screen and (max-width:1000px){
+
+  }//md
+ */

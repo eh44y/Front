@@ -1,0 +1,301 @@
+<?php include "sub_header.html" ?>
+  <h2>kid</h2>
+
+  <script>
+
+    $(function(){
+        $(".kid li:eq(1)").addClass("mtop")
+        item = "li"
+    
+        $(window).resize(function(){
+          var $container = $('section.kid ul');
+          $container.isotope({
+            filter: item,
+            animationOptions: {
+              duration: 750,
+              easing: 'linear',
+              queue: false
+            }
+          });
+        })//resize
+      })//ready
+    
+    $(window).load(function(){
+      //컨테이너 설정
+      
+      var $container = $('section.kid ul');
+      $container.isotope({
+        filter: item,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+    
+        
+      //이벤트 설정
+      $('.btn_container div button').click(function(){
+        btnN  = $(this).attr("data-n")
+        $(".btn_container div button").removeClass("active")
+        $(this).addClass("active")
+        
+        item = $(this).attr("data-cate");
+        $(".kid li").removeClass("mtop")
+        $(".kid "+item+":eq(1)").addClass("mtop")
+  
+        $container.isotope({
+          filter: item,
+          animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+          }
+        });
+      })//click
+  
+      $(".btn_cate_sm .aa").click(function(){
+      $(this).siblings("div").stop().slideToggle()
+    })//click
+    $(".btn_cate_sm div button").click(function(){
+      n = $(this).attr("data-n")
+      if(n == 1 || n == 2 || n == 3 || n == 4){
+        $(this).parent("div").stop().slideUp()
+      }
+    })//click
+
+    $("section.kid ul li a").attr("href","buy-page.html")
+    
+    })//load
+  
+  </script>
+  
+    <section class="kid">
+  
+      <div class="btn_container btn_cate btn_cate_lg">
+        <div>
+          <button class="catebtn1 active" data-n="1" data-cate="li">All</button>
+          <button class="catebtn2" data-n="2" data-cate=".Kbed">Bed</button>
+          <button class="catebtn3" data-n="3" data-cate=".Kchair">Chair</button>
+          <button class="catebtn3" data-n="3" data-cate=".Kdesk">Desk</button>
+        </div>
+      </div>
+      <div class="btn_container btn_cate btn_cate_sm">
+        <button class="aa" data-n="10">Category</button>
+        <div>
+          <button class="catebtn1 active" data-n="1" data-cate="li">All</button>
+          <button class="catebtn2" data-n="2" data-cate=".Kbed">Bed</button>
+          <button class="catebtn3" data-n="3" data-cate=".Kchair">Chair</button>
+          <button class="catebtn3" data-n="3" data-cate=".Kdesk">Desk</button>
+        </div>
+      </div>
+  
+      <ul>
+        <!-- bed -->
+        <li class="Kbed">
+          <a href="#">
+            <img src="img/YSJ/kidKbed/kbed1.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Andy Single Bed</h3>
+            <p class="price">KRW 484,000</p>
+            <p class="sale">KRW 411,000</p>
+          </div>
+        </li>
+        <li class="Kbed">
+          <a href="#">
+            <img src="img/YSJ/kidKbed/kbed2.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Ray Bunker Bed</h3>
+            <p class="price">KRW 429,000</p>
+            <p class="sale">KRW 299,000</p>
+          </div>
+        </li>
+        <li class="Kbed">
+          <a href="#">
+            <img src="img/YSJ/kidKbed/kbed3.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Disign Kino Schuette House Kids Bed</h3>
+            <p class="price">KRW 272,000</p>
+            <p class="sale">KRW 243,000</p>
+          </div>
+        </li>
+        <li class="Kbed">
+          <a href="#">
+            <img src="img/YSJ/kidKbed/kbed4.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">1800 Kids A Double-deck Bed</h3>
+            <p class="price">KRW 620,000</p>
+            <p class="sale">KRW 475,000</p>
+          </div>
+        </li>
+        <li class="Kbed">
+          <a href="#">
+            <img src="img/YSJ/kidKbed/kbed5.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">BebeHouse Wood Kids Bed</h3>
+            <p class="price">KRW 675,000</p>
+            <p class="sale">KRW 576,000</p>
+          </div>
+        </li>
+        <li class="Kbed">
+          <a href="#">
+            <img src="img/YSJ/kidKbed/kbed6.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Bebetree Wood Toddler Bed</h3>
+            <p class="price">KRW647,000</p>
+            <p class="sale">KRW 547,000</p>
+          </div>
+        </li>
+        <!-- bed end -->
+  
+        <!-- chair -->
+        <li class="Kchair">
+          <a href="#">
+            <img src="img/YSJ/kidKchair/chair1.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Animal Kids Sofa Chair</h3>
+            <p class="price">KRW 71,000</p>
+            <p class="sale">KRW 55,000</p>
+          </div>
+        </li>
+        <li class="Kchair">
+          <a href="#">
+            <img src="img/YSJ/kidKchair/chair2.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Animal Kids Sofa Chair</h3>
+            <p class="price">KRW 61,000</p>
+            <p class="sale">KRW 43,000</p>
+          </div>
+        </li>
+        <li class="Kchair">
+          <a href="#">
+            <img src="img/YSJ/kidKchair/chair3.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Q1 Mash Chair</h3>
+            <p class="price">KRW 137,000</p>
+            <p class="sale">KRW 115,000</p>
+          </div>
+        </li>
+        <li class="Kchair">
+          <a href="#">
+            <img src="img/YSJ/kidKchair/chair4.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">BLMG BlumingHome A Student Chair</h3>
+            <p class="price">KRW 92,600</p>
+            <p class="sale">KRW 74,300</p>
+          </div>
+        </li>
+        <li class="Kchair">
+          <a href="#">
+            <img src="img/YSJ/kidKchair/chair5.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Bentley Chair</h3>
+            <p class="price">KRW 139,000</p>
+            <p class="sale">KRW 122,000</p>
+          </div>
+        </li>
+        <li class="Kchair">
+          <a href="#">
+            <img src="img/YSJ/kidKchair/chair6.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">C-65 Executive Chair</h3>
+            <p class="price">KRW 113,000</p>
+            <p class="sale">KRW 65,900</p>
+          </div>
+        </li>
+        <!-- chair end -->
+  
+        <!-- desk -->
+        <li class="Kdesk">
+          <a href="#">
+            <img src="img/YSJ/kidKdesk/desk1.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Angel Play House Receiving Art Form Desk</h3>
+            <p class="price">KRW 528,000</p>
+            <p class="sale">KRW 450,000</p>
+          </div>
+        </li>
+        <li class="Kdesk">
+          <a href="#">
+            <img src="img/YSJ/kidKdesk/desk2.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Evans Wooden Desk</h3>
+            <p class="price">KRW 183,000</p>
+            <p class="sale">KRW 149,000</p>
+          </div>
+        </li>
+        <li class="Kdesk">
+          <a href="#">
+            <img src="img/YSJ/kidKdesk/desk3.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Bao Desk 800/1200</h3>
+            <p class="price">KRW 64,000</p>
+            <p class="sale">KRW 34,900</p>
+          </div>
+        </li>
+        <li class="Kdesk">
+          <a href="#">
+            <img src="img/YSJ/kidKdesk/desk4.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">A New Semester Desker 1200/1400</h3>
+            <p class="price">KRW 310,000</p>
+            <p class="sale">KRW 278,000</p>
+          </div>
+        </li>
+        <li class="Kdesk">
+          <a href="#">
+            <img src="img/YSJ/kidKdesk/desk5.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Tori Wooden Infant Cushion Chair Desk Set</h3>
+            <p class="price">KRW 127,000</p>
+            <p class="sale">KRW 115,000</p>
+          </div>
+        </li>
+        <li class="Kdesk">
+          <a href="#">
+            <img src="img/YSJ/kidKdesk/desk6.jpg" alt="">
+          </a>
+          <div class="textbox">
+            <h3 class="name">Desker 1200 Set</h3>
+            <p class="price">KRW 425,000</p>
+            <p class="sale">KRW 304,000</p>
+          </div>
+        </li>
+        <!-- desk end -->
+      </ul>
+    </section>
+
+
+      
+<?php include "sub_footer.html" ?>
+
+<!-- 
+  <li>
+    <a href="#">
+      <img src="" alt="">
+    </a>
+    <div class="textbox">
+      <h3 class="name"></h3>
+      <p class="price">KRW</p>
+      <p class="sale">KRW</p>
+    </div>
+  </li>
+ -->
+

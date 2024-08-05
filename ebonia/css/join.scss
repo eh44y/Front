@@ -1,0 +1,154 @@
+@import "styleguide";
+
+.joinbox{
+  @include center(800px);
+  @include pd1(20px, 20px);
+  margin-bottom: 200px;
+  >h2{
+    @include h;
+        text-align: center;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 60px;
+  }//section.joinbox>h
+  form{
+    p{
+      width: 100%;
+      input[type="text"],input[type="password"],input[type="email"]{
+        width: 100%;
+        padding: 17px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $color5;
+        border-bottom: none;
+        box-sizing: border-box;
+        /* border-radius: 7px; */
+        &::placeholder{
+          color: #555;
+          letter-spacing: 1px;
+          @media screen and (max-width:600px){font-size: 0.9em;}
+        }
+      }
+      >span{color: $color3;}
+      &.jcheck1{
+        margin: 20px 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 14px;
+        @media screen and (max-width:600px){font-size: 0.9em;}
+        >i{
+          display: block;
+          margin: 20px 10px;
+          font-size: 11px;
+          color: $tcolor3;
+          font-weight: normal;
+          line-height: 170%;
+          @media screen and (max-width:600px){font-size: 0.9em;}
+        }
+      }
+      &:nth-child(6) input, &:nth-child(10){border-bottom: 1px solid $color5 !important;}//section.joinbox>form>p:nth-6
+      &.check{
+        letter-spacing: 1px;
+        color: $tcolor5; 
+        width: 100%;
+        padding: 17px 40px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $color5;
+        box-sizing: border-box;
+        border-bottom: none;
+        @media screen and (max-width:750px){
+          text-align: center;
+          font-size: 0.9em;
+        }
+        .check_e, .check_s{
+          margin-left: 10px;
+        }
+        .check_e::before{
+          content: "(";
+          margin-left: -10px;
+        }
+        .check_s::after{
+          content: ")";
+          margin-left: 45px;
+        }
+        >button{
+          @include btn1($color5);
+          color: #666 !important;
+          font-size: 11px;
+          border-radius: 30px;
+          margin-right: 17%;
+          @media screen and (max-width:750px){
+            display: block;
+            margin: 15px auto;
+            padding: 5px 30px;
+          }
+        }
+        i{
+          display: block;
+          color: #666;
+          font-size: 11px;
+          margin-top: 15px;
+          line-height: 170%;
+          @media screen and (max-width:600px){font-size: 0.9em;}
+        }
+      }//section.joinbox>form>p.check
+      .btn_submit{
+        @include btn2($color3, 13px, 70px);
+        display: block;
+        border-radius: 7px;
+        margin: 30px auto;
+      }//section.joinbox>form>p>btn_submit
+    }//section.joinbox>form>p
+  }//section.joinbox>form
+  .clause{
+    @media screen and (max-width:750px){
+      font-size: 0.9em;
+    }
+    border-top: 1px solid $color5;
+    padding-top: 50px;
+    h3{
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }//section.joinbox>clause<h3
+    textarea{
+      width: 100%;
+      height: 50px;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-color: $color5;
+    }
+    table{
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+      text-align: center;
+      th{font-weight: bold;}
+      th, tr td:nth-child(1){
+        background-color: $color6;
+      }
+      td, th{
+        border: 1px solid $color5;
+        padding: 17px;
+        @media screen and (max-width:750px){
+          padding: 10px;
+        }
+      }//section.joinbox>clause>table>td, th
+    }//section.joinbox>clause>table
+    p{
+      margin-top: 20px;
+      line-height: 170%;
+    }
+  }//section.joinbox>clause
+  input, textarea{
+    outline: none;
+    &.active{
+      background-color: $color5;
+      transition: background-color 0.7s;
+      &::placeholder{color: transparent !important;}
+    }
+  }
+}//section.joinbox
