@@ -1,0 +1,220 @@
+@import "styleguide";
+
+.wrap{
+  @include center(1500px);
+  /* border: 1px solid black; */
+  @media screen and (min-width:1100.1px){
+    @include pd1(50px, 30px);
+    @include clearfix;
+    >aside{
+      float: left;
+      /* border: 1px solid red; */
+      width: 19%;
+      >section{
+        /* border: 1px solid blue; */
+        margin-bottom: 30px;
+        margin-left: 27px;
+        >.menu{
+          >li{
+            >a{
+              display: none;
+            }//wrap>aside>section>ul>li>a
+            >ul{
+              >li{
+                >a{
+                  display: none;
+                  position: relative;
+                  @include en;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  letter-spacing: 3px;
+                  &::before{
+                    @include abslt(-27px, 40%, 0, 0);
+                    content: "";
+                    display: inline-block;
+                    width: 17px;
+                    height: 1px;
+                    background-color: #666;
+                  }
+                }//wrap>aside>section>ul>li>ul>li>a
+              }//wrap>aside>section>ul>li>ul
+            }//wrap>aside>section>ul>li>ul
+          }//wrap>aside>section>ul>li
+        }//wrap>aside>section>ul
+      }//wrap>aside>section
+      .sidenav{
+        /* border: 1px solid blue; */
+        background-color: $color6;
+        border-radius: 10px;
+        padding: 3px 0;
+        >ul{
+          >li{
+            display: none;
+            margin: 35px 0;
+            >a{
+              display: none;
+            }//wrap>aside>sidenav>ul>li>a
+            >ul{
+              >li{
+                &:nth-child(7){display: none;}
+                >a{
+                  color: $tcolor5;
+                  position: relative;
+                  @include en;
+                  display: block;
+                  padding: 13px 45px;
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  letter-spacing: 1px;
+                  transition: all 0.3s;
+                  @media screen and (min-width:1100.1px) and (max-width:1300px){
+                    letter-spacing: normal;
+                    font-size: 13px;
+                  }
+                  &::before{
+                    opacity: 0;
+                    display: block;
+                    @include abslt(45px, 45%, 0, 0);
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    background-color: $tcolor4;
+                  }//wrap>aside>sidenav>ul>li>ul>li>a::before
+                  &.active{
+                    padding-left: 37px;
+                    font-weight: 800;
+                    /* background-color: rgba($color: $color3, $alpha: 0.2);
+                    border-radius: 10px; */
+                    
+                    font-size: 15px;
+                    @media screen and (min-width:1100.1px) and (max-width:1300px){
+                      font-size: 14px;
+                    }
+                  }//wrap>aside>sidenav>ul>li>ul>li>a.active
+                  &:hover{
+                    background-color: rgba($color: $color3, $alpha: 0.2);
+                    border-radius: 10px;
+                    padding-left: 63px;
+                    &::before{
+                      opacity: 1;
+                      transition: all 0.3s;
+                      display: block;
+                      width: 13px;
+                    }//wrap>aside>sidenav>ul>li>ul>li>a:hover::before
+                  }//wrap>aside>sidenav>ul>li>ul>li>a:hover
+                }//wrap>aside>sidenav>ul>li>ul>li>a
+              }//wrap>aside>sidenav>ul>li>ul>li
+            }//wrap>aside>sidenav>ul>li>ul
+          }//wrap>aside>sidenav>ul>li
+        }//wrap>aside>sidenav>ul
+      }//wrap>aside>sidenav
+    }//wrap>aside
+    article.content{
+      width: 76%;
+      /* border: 1px solid red; */
+      float: right;
+      >h2{
+        @include h;
+        text-align: center;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        /* border: 1px solid red; */
+        margin-bottom: 22px;
+      }//wrap>content>h2
+    }//wrap>content
+  }//lg.max1100
+  @media screen and (max-width:1100px){
+    >aside{
+      /* border: 1px solid blue; */
+      >section{display: none;}
+      margin-top: 20px;
+      >.sidenav{
+        >ul{
+          >li{&:nth-child(1){
+            >ul{
+              >li{
+                &:nth-child(3n) a{
+                  border-right: none;
+                }
+                &:nth-child(7) a{
+                  display: none;
+                }
+              }
+            } 
+          }
+            &:nth-child(2){
+              >ul{
+                >li{
+                  width: 24%;
+                  &:nth-child(4n) a{
+                    border-right: none;
+                  }                  
+                }
+              }
+            }
+              display: none;
+            >a{
+              display: none;
+            }//sidenav>ul>li>a
+            >ul{
+              margin-bottom: 30px;
+              >li{
+                display: inline-block;
+                width: 32.5%;                
+                
+                >a{
+                  display: inline-block;
+                  width: 100%;
+                  padding: 10px 10px;
+                  border-bottom: 1px solid $color5;
+                  border-right: 1px solid $color5;
+                  box-sizing: border-box;
+                  text-align: center;
+                }//sidenav>ul>li>ul>li>a
+              }//sidenav>ul>li>ul>li
+            }//sidenav>ul>li>ul
+          }//sidenav>ul>li
+        }//sidenav>ul
+      }//sidenav
+    }//aside
+    >article.content{
+      /* border: 1px solid red; */
+      >h2{
+        @include h;
+        font-size: 17px;
+        text-align: center;
+        margin: 20px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        /* border: 1px solid black; */
+        font-weight: bold;
+      }
+    }
+  }//md
+
+  /* sub_page motion */
+  overflow-x: hidden;
+  &.active{
+    >aside, >article.content{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }//wrap.active
+
+  >aside{
+    transform: translateX(-100px);
+  }//aside
+  >article.content{
+    transition-delay: 0.3s !important;
+    transform: translateX(100px);
+  }//article.content
+  >aside, >article.content{
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+  }//aside, article.content
+  /* sub_page motion end */
+
+}//wrap
+

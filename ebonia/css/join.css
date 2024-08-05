@@ -1,0 +1,196 @@
+/* main color */
+/* text color */
+.joinbox {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 200px; }
+  @media screen and (min-width: 1000.1px) {
+    .joinbox {
+      padding: 20px 0; } }
+  @media screen and (max-width: 1000px) {
+    .joinbox {
+      padding: 20px 0; } }
+  .joinbox > h2 {
+    font-family: 'Hind Guntur', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 60px; }
+  .joinbox form p {
+    width: 100%; }
+    .joinbox form p input[type="text"], .joinbox form p input[type="password"], .joinbox form p input[type="email"] {
+      width: 100%;
+      padding: 17px;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid #f5f5f5;
+      border-bottom: none;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      /* border-radius: 7px; */ }
+      .joinbox form p input[type="text"]::-webkit-input-placeholder, .joinbox form p input[type="password"]::-webkit-input-placeholder, .joinbox form p input[type="email"]::-webkit-input-placeholder {
+        color: #555;
+        letter-spacing: 1px; }
+      .joinbox form p input[type="text"]:-ms-input-placeholder, .joinbox form p input[type="password"]:-ms-input-placeholder, .joinbox form p input[type="email"]:-ms-input-placeholder {
+        color: #555;
+        letter-spacing: 1px; }
+      .joinbox form p input[type="text"]::-ms-input-placeholder, .joinbox form p input[type="password"]::-ms-input-placeholder, .joinbox form p input[type="email"]::-ms-input-placeholder {
+        color: #555;
+        letter-spacing: 1px; }
+      .joinbox form p input[type="text"]::placeholder, .joinbox form p input[type="password"]::placeholder, .joinbox form p input[type="email"]::placeholder {
+        color: #555;
+        letter-spacing: 1px; }
+        @media screen and (max-width: 600px) {
+          .joinbox form p input[type="text"]::-webkit-input-placeholder, .joinbox form p input[type="password"]::-webkit-input-placeholder, .joinbox form p input[type="email"]::-webkit-input-placeholder {
+            font-size: 0.9em; }
+          .joinbox form p input[type="text"]:-ms-input-placeholder, .joinbox form p input[type="password"]:-ms-input-placeholder, .joinbox form p input[type="email"]:-ms-input-placeholder {
+            font-size: 0.9em; }
+          .joinbox form p input[type="text"]::-ms-input-placeholder, .joinbox form p input[type="password"]::-ms-input-placeholder, .joinbox form p input[type="email"]::-ms-input-placeholder {
+            font-size: 0.9em; }
+          .joinbox form p input[type="text"]::placeholder, .joinbox form p input[type="password"]::placeholder, .joinbox form p input[type="email"]::placeholder {
+            font-size: 0.9em; } }
+    .joinbox form p > span {
+      color: #dab799; }
+    .joinbox form p.jcheck1 {
+      margin: 20px 0;
+      letter-spacing: 1px;
+      font-weight: bold;
+      font-size: 14px; }
+      @media screen and (max-width: 600px) {
+        .joinbox form p.jcheck1 {
+          font-size: 0.9em; } }
+      .joinbox form p.jcheck1 > i {
+        display: block;
+        margin: 20px 10px;
+        font-size: 11px;
+        color: #b9b9b9;
+        font-weight: normal;
+        line-height: 170%; }
+        @media screen and (max-width: 600px) {
+          .joinbox form p.jcheck1 > i {
+            font-size: 0.9em; } }
+    .joinbox form p:nth-child(6) input, .joinbox form p:nth-child(10) {
+      border-bottom: 1px solid #f5f5f5 !important; }
+    .joinbox form p.check {
+      letter-spacing: 1px;
+      color: #8a7c7c;
+      width: 100%;
+      padding: 17px 40px;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid #f5f5f5;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-bottom: none; }
+      @media screen and (max-width: 750px) {
+        .joinbox form p.check {
+          text-align: center;
+          font-size: 0.9em; } }
+      .joinbox form p.check .check_e, .joinbox form p.check .check_s {
+        margin-left: 10px; }
+      .joinbox form p.check .check_e::before {
+        content: "(";
+        margin-left: -10px; }
+      .joinbox form p.check .check_s::after {
+        content: ")";
+        margin-left: 45px; }
+      .joinbox form p.check > button {
+        display: inline-block;
+        padding: 3px 12px;
+        background-color: #f5f5f5;
+        border: 1px solid #f5f5f5;
+        border-radius: 2px;
+        color: white;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        color: #666 !important;
+        font-size: 11px;
+        border-radius: 30px;
+        margin-right: 17%; }
+        .joinbox form p.check > button:hover {
+          background-color: white;
+          border: 1px solid #f5f5f5;
+          color: #f5f5f5; }
+        @media screen and (max-width: 750px) {
+          .joinbox form p.check > button {
+            display: block;
+            margin: 15px auto;
+            padding: 5px 30px; } }
+      .joinbox form p.check i {
+        display: block;
+        color: #666;
+        font-size: 11px;
+        margin-top: 15px;
+        line-height: 170%; }
+        @media screen and (max-width: 600px) {
+          .joinbox form p.check i {
+            font-size: 0.9em; } }
+    .joinbox form p .btn_submit {
+      display: inline-block;
+      padding: 13px 70px;
+      background-color: #dab799;
+      border: 1px solid #dab799;
+      border-radius: 2px;
+      color: white;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      display: block;
+      border-radius: 7px;
+      margin: 30px auto; }
+      .joinbox form p .btn_submit:hover {
+        background-color: white;
+        border: 1px solid #dab799;
+        color: #dab799; }
+  .joinbox .clause {
+    border-top: 1px solid #f5f5f5;
+    padding-top: 50px; }
+    @media screen and (max-width: 750px) {
+      .joinbox .clause {
+        font-size: 0.9em; } }
+    .joinbox .clause h3 {
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px; }
+    .joinbox .clause textarea {
+      width: 100%;
+      height: 50px;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-color: #f5f5f5; }
+    .joinbox .clause table {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+      text-align: center; }
+      .joinbox .clause table th {
+        font-weight: bold; }
+      .joinbox .clause table th, .joinbox .clause table tr td:nth-child(1) {
+        background-color: #f9f9f9; }
+      .joinbox .clause table td, .joinbox .clause table th {
+        border: 1px solid #f5f5f5;
+        padding: 17px; }
+        @media screen and (max-width: 750px) {
+          .joinbox .clause table td, .joinbox .clause table th {
+            padding: 10px; } }
+    .joinbox .clause p {
+      margin-top: 20px;
+      line-height: 170%; }
+  .joinbox input, .joinbox textarea {
+    outline: none; }
+    .joinbox input.active, .joinbox textarea.active {
+      background-color: #f5f5f5;
+      -webkit-transition: background-color 0.7s;
+      transition: background-color 0.7s; }
+      .joinbox input.active::-webkit-input-placeholder, .joinbox textarea.active::-webkit-input-placeholder {
+        color: transparent !important; }
+      .joinbox input.active:-ms-input-placeholder, .joinbox textarea.active:-ms-input-placeholder {
+        color: transparent !important; }
+      .joinbox input.active::-ms-input-placeholder, .joinbox textarea.active::-ms-input-placeholder {
+        color: transparent !important; }
+      .joinbox input.active::placeholder, .joinbox textarea.active::placeholder {
+        color: transparent !important; }
+
+/*# sourceMappingURL=join.css.map */

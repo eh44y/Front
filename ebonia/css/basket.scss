@@ -1,0 +1,74 @@
+@import "styleguide";
+
+.basket{
+  @include center(1400px);
+  @include pd1(20px, 20px);
+  margin-bottom: 500px;
+  >h2{
+    @include h;
+        text-align: center;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 60px;
+  }//basket>h
+  table{
+    font-size: 11px;
+    letter-spacing: 1px;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (max-width:1000px){
+      th{
+        &:nth-child(1), &:nth-child(2), &:nth-child(5), &:nth-child(8){
+          display: none;
+        }
+      }//th
+    }//sm
+    th{
+      background-color: $color6;
+      font-weight: bold;
+      &:nth-child(3){
+        width: 50%;
+        @media screen and (max-width:800px){
+          width: 25%;
+        }
+      }
+    }
+    tr:nth-child(2) td{
+      border-bottom: 1px solid $color5;
+    }
+    td, th{
+      padding: 17px;
+    }//basket>table>td, th
+  }//basket>table
+  .btn_bk1{
+    @include btn2($tcolor6, 7px, 17px);
+  }
+  .btn_bk2, .btn_bk3{
+    @include btn3($tcolor6, 7px, 17px);
+    margin-left: 10px;
+  }
+  .btn_bk4{
+    @include btn2($color3, 15px, 100px);
+  }
+  @media screen and (min-width:800.1px){
+    .btn_bk1, .btn_bk2, .btn_bk3{
+      float: left;
+    }
+    .btn_bk4{
+      float: right;
+    }
+  }
+  @media screen and (max-width:800px){
+    button{
+      display: block;
+      width: 100%;
+      margin: 13px 0 !important;
+    }
+    margin-bottom: 150px;
+  }
+}//basket

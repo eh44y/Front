@@ -1,0 +1,30 @@
+@import "styleguide";
+
+.board table{
+  width: 100%;
+} 
+.board th{
+  background: $color6;
+}
+.board td ,.board th{
+  padding: 15px;
+  text-align: center; 
+}
+.board tr td:nth-child(2){text-align: left;}
+.board th:first-child{
+  text-align: left;
+}
+.board tr{
+  border-bottom: 1px solid $color6;
+}
+@media screen and (min-width:800px){
+
+}
+@media screen and (max-width:800px){
+   .sm_board2{
+      tr th:nth-child(5){display: none;}
+      tr th:nth-child(3){display: none;}
+      tr td:nth-child(3){display: none;}
+      tr td:nth-child(5){display: none;}
+   }
+}
